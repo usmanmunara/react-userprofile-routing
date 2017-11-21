@@ -14,16 +14,25 @@
     text-align: center;
 }
 
-.toastify-content {
+.toastify-content--success .toastify__body {
+    background: #07bc0c;
+}
+
+.toastify-content--error .toastify__body{
+    background: #e74c3c;
+}
+
+
+/* .toastify-content {
     background: initial;
 }
 .toastify-content--success{
-    color: green;
+    color: #07bc0c;
 }
 .toastify-content--error {
-    color: red;
+    color: #e74c3c;
 }
 
 .toastify{
     background: none;
-}
+} */
