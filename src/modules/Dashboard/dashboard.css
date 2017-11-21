@@ -1,0 +1,28 @@
+#avatar-img {
+    height: 150px;
+    padding: 1em;
+    margin: auto;
+    background: none;
+    background-color: rgb(224, 220, 220);
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+
+.Dashboard h2{
+    font-family: 'Indie Flower';
+    font-size: 2.2em;
+}
+
+.Dashboard{
+    text-align: center;
+}
+
+.col-form-label{
+    font-family: 'Nunito';
+    font-size: 1.2em;
+    padding-top: 5px;
+    color: #000;
+}

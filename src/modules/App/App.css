@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+
+
+#desi-crav {
+  font-family: 'Indie Flower', sans-serif;
+  font-size: 3.3em;
+  padding-left: 25px;
+
+}
+.App {
+  text-align: center;
+}
+
+.button-seperate{
+  background: none;
+  margin: 5px !important;
+}
+* {
+  background: url('./image.jpg') no-repeat fixed;
+  background-size: cover;
+}
+
+.button-logout{ 
+  width: 50%;
+  color: #337ab7;
+}
+
+.btn-toolbar > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+.navbar {
+  border: none;
+}
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.nav-buttons {
+  padding: 10px;
+}
+.btn-toolbar {
+  width: 16em;
+}
+
+
+
+
+@media screen and (max-width: 660px) {
+  .nav-buttons{
+    display:flex;
+    flex-flow: row;
+    flex: 0 0 100px;
+  }
+}
