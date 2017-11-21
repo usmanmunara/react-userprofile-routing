@@ -2,6 +2,7 @@
   "name": "react-userprofile-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://usmaaaf.github.io/react-userprofile-routing",
   "dependencies": {
     "react": "^16.1.1",
     "react-bootstrap": "^0.31.5",
