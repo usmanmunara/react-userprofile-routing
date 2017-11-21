@@ -7,7 +7,7 @@ import {
 import { Login, Dashboard, Register, Reset, App } from '../modules';
 
 const Routers = () => (
-	<BrowserRouter basename={process.env.PUBLIC_URL}>
+	<BrowserRouter basename="/react-userprofile-routing">
 		<div>
 			<Route path="/" component={App} />
             <Route exact path= "/" component={Login}/>
