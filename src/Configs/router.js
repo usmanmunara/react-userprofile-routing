@@ -7,10 +7,10 @@ import {
 import { Login, Dashboard, Register, Reset, App } from '../modules';
 
 const Routers = () => (
-	<BrowserRouter>
+	<BrowserRouter basename={process.env.PUBLIC_URL}>
 		<div>
-			<Route path={process.env.PUBLIC_URL + "/" }component={App} />
-            <Route exact path={process.env.PUBLIC_URL + "/"} component={Login}/>
+			<Route path="/" component={App} />
+            <Route exact path= "/" component={Login}/>
             <Route exact path="/register" component={Register} />
 			<Route path="/dashboard" component={Dashboard} />
 			<Route path="/reset" component={Reset} />
