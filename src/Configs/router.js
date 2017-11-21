@@ -9,11 +9,11 @@ import { Login, Dashboard, Register, Reset, App } from '../modules';
 const Routers = () => (
 	<BrowserRouter>
 		<div>
-			<Route path="/" component={App} />
-            <Route exact path="/" component={Login}/>
-            <Route exact path="/register" component={Register} />
-			<Route path="/dashboard" component={Dashboard} />
-			<Route path="/reset" component={Reset} />
+			<Route path="/react-userprofile-routing" component={App} />
+            <Route exact path="/react-userprofile-routing" component={Login}/>
+            <Route exact path="/react-userprofile-routing/register" component={Register} />
+			<Route path="/react-userprofile-routing/dashboard" component={Dashboard} />
+			<Route path="/react-userprofile-routing/reset" component={Reset} />
 		</div>
 	</BrowserRouter>
 );

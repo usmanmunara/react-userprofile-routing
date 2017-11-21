@@ -27,18 +27,6 @@ export class Auth {
         }
     };
 
-    static userExist = (email) => {
-        const user = users.filter((user) => {
-            if(user.email === email){
-                return true;
-            }
-            else {
-                return false;
-            }
-        })
-        return user;
-    };
-
     static addUser = (email, password) => {
 
         const user = {

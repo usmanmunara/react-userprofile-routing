@@ -14,17 +14,12 @@ export class Register extends Component {
             Auth.notify("error", "Password does not match! Enter correct password");
             Auth.notify("warn", "Password length must be greater than 6");
         } else {
-            const exist = Auth.userExist(this.refs.email.value);
-            if (exist > 0) {
-                Auth.notify("success", "Registration confirmed");
-                Auth.addUser(this.refs.email.value, this.refs.pass.value);
-                this
-                    .props
-                    .history
-                    .push("/");
-            } else {
-                Auth.notify("error", "Email Address Already Exists");
-            }
+                    Auth.notify("success", "Registration confirmed");
+                    Auth.addUser(this.refs.email.value, this.refs.pass.value);
+                    this
+                        .props
+                        .history
+                        .push("/");
         }
     }
 
