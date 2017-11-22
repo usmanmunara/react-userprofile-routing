@@ -11,6 +11,11 @@
     text-align: center;
 }
 
+#passwordHelpBlock{
+    color: rgb(223, 221, 221);
+    font-size: 13px;
+}
+
 .regInput {
     width: 40% !important;
     margin: auto;

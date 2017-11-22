@@ -14,25 +14,9 @@
     text-align: center;
 }
 
-.toastify-content--success .toastify__body {
-    background: #07bc0c;
-}
-
-.toastify-content--error .toastify__body{
-    background: #e74c3c;
+.loginInput {
+    width: 40% !important;
+    margin: auto;
 }
 
 
-/* .toastify-content {
-    background: initial;
-}
-.toastify-content--success{
-    color: #07bc0c;
-}
-.toastify-content--error {
-    color: #e74c3c;
-}
-
-.toastify{
-    background: none;
-} */

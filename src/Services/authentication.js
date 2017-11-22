@@ -18,14 +18,29 @@ export class Auth {
 
     //Register
     static passwordCheck = (password, confirmpass) => {
-        if (password.length <= 6) {
-            return true;
-        } else if (password !== confirmpass) {
+        if (password !== confirmpass) {
             return true;
         } else {
             return false;
         }
     };
+
+    static passwordlength = (password) => {
+        if (password.length <= 7) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    static emailCheck = (email) => {
+        var re = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/;
+        if (!re.test(email)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
     static addUser = (email, password) => {
 
@@ -40,10 +55,9 @@ export class Auth {
     }
 
     //Dashboard
-    static updateUser = (name, email) => {
+    static updateUser = (name) => {
         users.map((user) => {
             if (user.id === currentUser[0].id) {
-                user.email = email;
                 user.name = name;
             }
             return user;
@@ -62,7 +76,7 @@ export class Auth {
         } else if (condition === "error") {
             toast.error(value, {position: toast.POSITION.TOP_CENTER});
         } else if (condition === "warn") {
-            toast.warn(value, {position: toast.POSITION.BOTTOM_CENTER});
+            toast.warn(value, {position: toast.POSITION.TOP_CENTER});
         }
     };
 

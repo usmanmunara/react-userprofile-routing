@@ -1,7 +1,7 @@
 import React from 'react';
 import {
 	BrowserRouter,
-	Route, Switch
+	Route
 } from 'react-router-dom';
 
 import { Login, Dashboard, Register, Reset, App } from '../modules';

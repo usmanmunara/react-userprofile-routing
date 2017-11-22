@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
-import {ToastContainer} from 'react-toastify';
-
-import {Button, ButtonToolbar, Navbar, Nav} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 
-import {Auth} from '../../Services/authentication';
+import {ToastContainer} from 'react-toastify';
+import {Button, ButtonToolbar, Navbar, Nav} from 'react-bootstrap';
 
+
+import {Auth} from '../../Services/authentication';
 import './App.css';
 
 export class App extends Component {
@@ -94,7 +94,8 @@ export class App extends Component {
             </div>
           </Nav>
         </Navbar>
-        < ToastContainer/>
+        < ToastContainer
+        autoClose={2000}/>
       </div>
 
     );

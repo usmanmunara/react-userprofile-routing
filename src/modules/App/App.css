@@ -62,13 +62,11 @@
   width: 16em;
 }
 
-
-
-
-@media screen and (max-width: 660px) {
-  .nav-buttons{
-    display:flex;
-    flex-flow: row;
-    flex: 0 0 100px;
-  }
+.toastify-content--success .toastify__body {
+  background: #07bc0c;
 }
+
+.toastify-content--error .toastify__body{
+  background: #e74c3c;
+}
+

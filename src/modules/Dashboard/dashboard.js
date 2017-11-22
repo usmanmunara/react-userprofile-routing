@@ -12,18 +12,17 @@ export class Dashboard extends Component {
         super();
         this.state = {
             name: '',
-            email: ''
         }
     }
 
     componentDidMount() {
-        this.setState({name: currentUser[0].name, email: currentUser[0].email});
+        this.setState({name: currentUser[0].name});
     };
 
     infoEdit(e) {
         e.preventDefault();
-        Auth.notify("success", "Information change successful");
-        Auth.updateUser(this.state.name, this.state.email);
+        Auth.notify("success", "Name changed successfully");
+        Auth.updateUser(this.state.name);
 
     }
 
@@ -60,9 +59,8 @@ export class Dashboard extends Component {
                         <input
                             className="form-control regInput"
                             name="email"
-                            onChange={(e) => this.handleChange(e)}
                             type="email"
-                            value={this.state.email}/>
+                            value={currentUser[0].email} disabled/>
                         <br/>
 
                         <Button type="submit" value="Update Profile">Profile Update kerein</Button>

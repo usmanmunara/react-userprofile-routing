@@ -1,12 +1,22 @@
 import React, {Component} from 'react';
 
+import {Auth} from '../../Services/authentication';
+import {Button} from 'react-bootstrap';
+
 import './reset.css'
+
 
 export class Reset extends Component {
 
     renderLogin(e){
         e.preventDefault();
-        this.props.reset();
+        const emailCheck = Auth.emailCheck(this.refs.email.value) ;
+        if (emailCheck){
+            Auth.notify("error", "Invalid Email Address");
+        } else {
+            Auth.notify("success", "Reset successful! Check your email address");
+            this.props.history.push("/");
+        }
     }
   
     render() {
@@ -14,9 +24,9 @@ export class Reset extends Component {
             <div className="Reset">
             <h2>Password Bhool Gaye Ho Kia?</h2>   
             <form onSubmit={(e) => this.renderLogin(e)}> 
-                <input className="form-control resetInput" type="email" placeholder="Enter your email address"/>
+                <input className="form-control resetInput" type="text" ref="email" placeholder="Enter your email address"/>
                 <br/>
-                <input className="form-control resetSubmit" type="submit" value="Reset"/>   
+                <Button type="submit" value="Reset">Reset</Button>
             </form>   
             </div>
         );

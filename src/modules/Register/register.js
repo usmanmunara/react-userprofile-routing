@@ -10,16 +10,21 @@ export class Register extends Component {
     register(event) {
         event.preventDefault();
         const confirmPass = Auth.passwordCheck(this.refs.pass.value, this.refs.confirmpass.value);
+        const emailCheck = Auth.emailCheck(this.refs.email.value) ;
+         const passwordlen =Auth.passwordlength(this.refs.pass.value);
         if (confirmPass) {
             Auth.notify("error", "Password does not match! Enter correct password");
-            Auth.notify("warn", "Password length must be greater than 6");
+        } else if (emailCheck){
+            Auth.notify("error", "Invalid Email Address");
+        } else if(passwordlen) {
+            Auth.notify("error", "Your password must be 8-20 characters long");
         } else {
-                    Auth.notify("success", "Registration confirmed");
-                    Auth.addUser(this.refs.email.value, this.refs.pass.value);
-                    this
-                        .props
-                        .history
-                        .push("/");
+            Auth.notify("success", "Registration confirmed");
+            Auth.addUser(this.refs.email.value, this.refs.pass.value);
+            this
+                .props
+                .history
+                .push("/");
         }
     }
 
@@ -34,8 +39,8 @@ export class Register extends Component {
                     </label>
                     <input
                         className="form-control regInput"
-                        type="email"
-                        placeholder="email"
+                        type="text"
+                        placeholder="Email"
                         ref="email"/>
                     <br/>
                     <label className="col-form-label">
@@ -46,6 +51,9 @@ export class Register extends Component {
                         type="password"
                         placeholder="Password"
                         ref="pass"/>
+                    <small id="passwordHelpBlock" class="form-text text-muted">
+                        Your password must be 8-20 characters long.
+                    </small>
                     <br/>
                     <label className="col-form-label">
                         Confirm Password:
