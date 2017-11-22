@@ -50,7 +50,7 @@ export class Login extends Component {
                         placeholder="Password"
                         ref="pass"/>
                     <br/>
-                    <Button type="submit" value="login">Submit</Button>
+                    <Button type="submit" value="login">Login</Button>
 
                 </form>
             </div>

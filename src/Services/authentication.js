@@ -67,6 +67,8 @@ export class Auth {
     //Logout
     static logout = () => {
         localStorage.clear();
+        currentUser.pop();
+        console.log(currentUser);
     }
 
     //toastr
