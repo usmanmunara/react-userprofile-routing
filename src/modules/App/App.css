@@ -70,3 +70,20 @@
   background: #e74c3c;
 }
 
+@media screen and (max-width: 500px) {
+  .btn-toolbar > div{
+    justify-content: space-around;
+  }
+
+  .navbar-right{
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .btn-toolbar{
+    width: 100%;
+  }
+
+  h2{
+    font-size: 24px;
+  }
+}
