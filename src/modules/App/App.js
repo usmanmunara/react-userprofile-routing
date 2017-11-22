@@ -37,16 +37,9 @@ export class App extends Component {
                   ? JSON
                     .parse(localStorage.getItem("userState"))
                     .isLoggedIn
-                    ? <div>
-                        <Button>
-                          <Link to={"/dashboard"} className="button-seperate">
-                            Dashboard
-                          </Link>
-                        </Button>
+                    ? <div className="dash-button">
                         <Button className="button-logout" onClick={() => this.logout()}>
-
                           Logout
-
                         </Button>
                       </div>
                     : <div>

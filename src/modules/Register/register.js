@@ -23,7 +23,7 @@ export class Register extends Component {
         } else if (emailCheck) {
             Auth.notify("error", "Invalid Email Address");
         } else if (passwordlen) {
-            Auth.notify("error", "Your password must be 8-20 characters long");
+            Auth.notify("error", "Your password must be 6 characters long");
         } else {
             Auth.notify("success", "Registration confirmed");
             Auth.addUser(this.refs.email.value, this.refs.pass.value);
@@ -35,12 +35,10 @@ export class Register extends Component {
     }
 
     caution() {
-        if(this.refs.pass.value.length > 8 && this.refs.pass.value.length < 20){
+        if(this.refs.pass.value.length > 6){
             this.setState({pass: false});
         } else {
-            console.log(this.state.pass);
             this.setState({pass: true});
-            console.log(this.state.pass);
         }
     }
 
@@ -70,7 +68,7 @@ export class Register extends Component {
                         ref="pass"/> 
                         {this.state.pass ? 
                             <small id="passwordHelpBlock" class="form-text text-muted">
-                                    Your password must be 8-20 characters long.
+                                    Your password must be 6 characters long.
                             </small>
                         : null}
                     <br/>

@@ -26,7 +26,7 @@ export class Auth {
     };
 
     static passwordlength = (password) => {
-        if (password.length <= 7) {
+        if (password.length <= 6) {
             return true;
         } else {
             return false;
@@ -68,7 +68,6 @@ export class Auth {
     static logout = () => {
         localStorage.clear();
         currentUser.pop();
-        console.log(currentUser);
     }
 
     //toastr
