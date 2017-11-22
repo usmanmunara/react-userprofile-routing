@@ -34,7 +34,7 @@ export class Auth {
     }
 
     static emailCheck = (email) => {
-        var re = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/;
+        var re = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
         if (!re.test(email)) {
             return true;
         } else {
